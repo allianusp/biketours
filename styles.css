@@ -1,16 +1,107 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset default margin and padding */
+body, h1, h2, ul, li {
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
     background-color: #f5f5f5;
 }
 
+header {
+    background-color: #313234;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Your existing CSS styles */
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #313234;
+    padding: 10px 0;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #007bff;
+}
+
+/* Add a subtle animation */
+.menu a:hover {
+    animation: bounce 0.3s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Your existing CSS styles */
+
+
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #212222;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #0056b3;
+}
+
+/* If you want to center-align the footer content */
+@media screen and (max-width: 768px) {
+    footer {
+        text-align: center;
+    }
+}
+
+.small-embed {
+    max-width: 10px; /* Adjust the width */
+    max-height: 10px; /* Adjust the height */
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
 .album {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    justify-content: flex-start; /* Change this to flex-start */
 }
 
 .trip-card {
@@ -19,29 +110,21 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
-    max-width: 300px;
+    width: calc(33.33% - 20px);
     margin: 10px;
+    box-sizing: border-box;
 }
 
-.trip-card img {
-    max-width: 100%;
-    border-radius: 8px;
-    margin: 10px 0;
+
+
+.trip-card:hover .trip-tip {
+    display: block;
 }
 
-.trip-card a {
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    padding: 8px 16px;
+.strava-embed-placeholder {
+    max-width: 100%; /* Embed takes the full width of the card */
+    height: auto; /* Allow the height to adjust based on the aspect ratio */
+    border: 2px solid #007bff;
     border-radius: 5px;
-    text-decoration: none;
-    margin-top: 10px;
 }
 
-.map {
-    width: 100%;
-    height: 200px;
-    border-radius: 8px;
-    margin: 10px 0;
-}
