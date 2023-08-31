@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strava Activity Embed</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f5f5f5;
-        }
-    </style>
+    <title>Bike Trip Album</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="1828465517"></div>
-    <script src="https://strava-embeds.com/embed.js"></script>
+    <div class="album">
+        <div class="trip-card" id="trip1">
+            <h2>Trip Title 1</h2>
+            <img src="trip1.jpg" alt="Trip 1 Image">
+            <div class="map" id="map1"></div>
+            <a href="trip1.html">View Details</a>
+        </div>
+        <!-- Repeat for other trips -->
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
